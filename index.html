@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional de Lucas Ventura Liderança Técnica, Desenvolvimento Full Stack, Projetos, IA e Automação." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Lucas Ventura | Tech Lead • Full Stack • Projetos • IA & Automação</title>
+  <style>
+    :root{
+      --bg:#06101c;--bg2:#0a1626;--card:rgba(13,30,51,.88);--card2:#0e1d31;
+      --text:#f3f7fb;--muted:#a9b8ca;--accent:#4da3ff;--accent2:#79c2ff;--accent3:#1b72d1;
+      --line:rgba(255,255,255,.085);--shadow:0 22px 70px rgba(0,0,0,.30);--radius:22px;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.6;background:radial-gradient(circle at 12% 0,rgba(77,163,255,.12),transparent 27%),radial-gradient(circle at 88% 8%,rgba(121,194,255,.08),transparent 28%),var(--bg)}
+    a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 32px));margin:auto}.nav-wrap{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(6,16,28,.84);border-bottom:1px solid var(--line)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative}.brand{font-weight:850;letter-spacing:-.03em;white-space:nowrap}.brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}.nav-links a:hover{color:var(--text)}
+    .menu-toggle{display:none;position:relative;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);color:var(--text);cursor:pointer;padding:0;flex:0 0 44px}
+    .menu-toggle span,.menu-toggle:before,.menu-toggle:after{content:"";position:absolute;left:50%;width:20px;height:2px;background:currentColor;border-radius:999px;transform:translateX(-50%);transition:transform .2s ease,opacity .2s ease,top .2s ease}
+    .menu-toggle:before{top:14px}.menu-toggle span{top:21px}.menu-toggle:after{top:28px}.menu-toggle.open:before{top:21px;transform:translateX(-50%) rotate(45deg)}.menu-toggle.open span{opacity:0}.menu-toggle.open:after{top:21px;transform:translateX(-50%) rotate(-45deg)}
+    section{padding:82px 0}.hero{min-height:88vh;display:grid;grid-template-columns:1.18fr .82fr;align-items:center;gap:48px;padding:78px 0 54px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(77,163,255,.25);background:rgba(77,163,255,.08);color:var(--accent2);border-radius:999px;font-size:.8rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    h1,h2,h3{margin-top:0;line-height:1.12}h1{font-size:clamp(3rem,8vw,6.2rem);margin:22px 0 14px;letter-spacing:-.06em;max-width:900px}.hero-role{font-size:clamp(1.08rem,2.4vw,1.55rem);font-weight:750;color:var(--accent);margin-bottom:20px}.hero p{max-width:790px;color:var(--muted);font-size:1.05rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-weight:750;transition:.2s ease}.btn.primary{background:linear-gradient(135deg,var(--accent3),var(--accent));color:white;border-color:transparent}.btn:hover{transform:translateY(-2px)}
+    .hero-panel{background:linear-gradient(180deg,rgba(15,34,58,.96),rgba(6,16,28,.98));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(77,163,255,.08),transparent 35%,rgba(121,194,255,.06));pointer-events:none}
+    .terminal-head{display:flex;gap:8px;margin-bottom:18px}.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}.terminal{position:relative;font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:.9rem;color:#dfeaf6}.terminal .accent{color:var(--accent2)}.terminal .muted{color:#7f93aa}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.045em;margin-bottom:8px}.section-head p{color:var(--muted);max-width:780px;margin:0}
+    .grid-2,.grid-3,.grid-4{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 14px 42px rgba(0,0,0,.15)}.card h3{margin-bottom:10px}.card p{color:var(--muted);margin-bottom:0}.metric{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;letter-spacing:-.05em;margin-bottom:6px;color:var(--accent2)}.metric-label{color:var(--muted);font-size:.91rem}
+    .pillars .card{min-height:220px}.pillar-num{font-family:monospace;color:var(--accent2);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}.skills-card ul,.case-card ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:9px;color:var(--muted)}.skills-card li:before,.case-card li:before{content:"→";color:var(--accent);margin-right:8px}
+    .case-card{position:relative;overflow:hidden;min-height:100%;transition:.25s ease}.case-card:hover{transform:translateY(-3px);border-color:rgba(77,163,255,.25)}.case-kicker{color:var(--accent2);text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;font-weight:850;margin-bottom:10px}.case-card h3{font-size:1.35rem}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:.76rem;color:#d5e6f7;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);padding:6px 9px;border-radius:999px}.case-result{margin-top:18px;padding:14px 15px;border-left:2px solid var(--accent);background:rgba(77,163,255,.06);border-radius:0 12px 12px 0;color:#dce9f6;font-size:.92rem}.case-result strong{color:var(--accent2)}
+    .timeline{position:relative;display:grid;gap:18px}.timeline:before{content:"";position:absolute;left:16px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--accent2),var(--accent3));opacity:.55}.timeline-item{position:relative;padding-left:50px}.timeline-item:before{content:"";position:absolute;left:9px;top:9px;width:15px;height:15px;border:4px solid var(--bg);border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px rgba(77,163,255,.5)}.timeline-item h3{margin-bottom:6px}.timeline-item p{color:var(--muted);margin:0}
+    .stack-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.stack-group h3{font-size:1.05rem;margin-bottom:12px}.stack{display:flex;flex-wrap:wrap;gap:10px}.stack span{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.025);color:#dce9f6;font-size:.87rem}
+    .callout{padding:28px;border:1px solid rgba(77,163,255,.18);background:linear-gradient(135deg,rgba(77,163,255,.07),rgba(121,194,255,.06));border-radius:24px}.callout strong{color:var(--accent2)}
+    .contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.contact-main{padding:34px;border-radius:26px;background:linear-gradient(135deg,rgba(77,163,255,.08),rgba(121,194,255,.06));border:1px solid var(--line)}.contact-main h2{font-size:clamp(2rem,5vw,4rem);margin-bottom:12px}.contact-main p{color:var(--muted);max-width:700px}
+    footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);font-size:.88rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(18px);transition:.6s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .hero,.contact-box{grid-template-columns:1fr}.hero{min-height:auto;padding-top:56px}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3,.grid-2{grid-template-columns:1fr}.stack-groups{grid-template-columns:1fr}
+      nav{min-height:64px;padding:8px 0;flex-direction:row;align-items:center;gap:12px}.brand{font-size:.92rem;max-width:calc(100% - 60px);overflow:hidden;text-overflow:ellipsis}.menu-toggle{display:block}
+      .nav-links{display:none;position:absolute;top:calc(100% + 9px);left:0;right:0;flex-direction:column;gap:0;padding:8px;background:rgba(8,20,35,.98);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 14px;border-radius:10px;color:var(--muted)}.nav-links a:hover{background:rgba(77,163,255,.08);color:var(--text)}
+    }
+    @media(max-width:560px){.grid-4{grid-template-columns:1fr}section{padding:62px 0}h1{font-size:3.15rem}.hero-panel{padding:20px}.container{width:min(100% - 22px,1180px)}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap"><div class="container"><nav>
+    <a class="brand" href="#top">Lucas Ventura <span>• Technology Leadership</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+    <div class="nav-links" id="navLinks"><a href="#sobre">Perfil</a><a href="#atuacao">Atuação</a><a href="#cases">Cases</a><a href="#trajetoria">Trajetória</a><a href="#stack">Stack</a><a href="#contato">Contato</a></div>
+  </nav></div></div>
+
+  <main id="top">
+    <div class="container"><section class="hero">
+      <div class="reveal">
+        <div class="eyebrow">Tech Lead • Full Stack • Projetos • IA & Automação</div>
+        <h1>Lucas Ventura</h1>
+        <div class="hero-role">Liderança técnica com atuação hands-on</div>
+        <p>Profissional de Tecnologia com mais de 6 anos de experiência em desenvolvimento de software, operações, suporte e liderança técnica. Atua conectando execução, gestão de projetos, relacionamento com clientes e tomada de decisão técnica.</p>
+        <p>A atuação combina desenvolvimento Full Stack, gestão de incidentes, refinamento e estimativas, melhoria de processos, automação e soluções com IA generativa.</p>
+        <div class="hero-actions"><a class="btn primary" href="#cases">Ver experiências selecionadas</a><a class="btn" href="https://linkedin.com/in/lucasventura01" target="_blank" rel="noreferrer">LinkedIn</a></div>
+      </div>
+      <aside class="hero-panel reveal" aria-label="Resumo técnico">
+        <div class="terminal-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="terminal">
+          <div><span class="muted">$</span> profile --mode</div><div class="accent">technical_leadership + hands_on</div><br>
+          <div><span class="muted">$</span> operate --domains</div>
+          <div>lead     → Tech Leadership & Team Support</div>
+          <div>build    → Full Stack Development</div>
+          <div>deliver  → Projects, Clients & Operations</div>
+          <div>automate → AI, n8n & Process Automation</div><br>
+          <div><span class="muted">$</span> principle</div><div class="accent">technology + people + delivery_</div>
+        </div>
+      </aside>
+    </section></div>
+
+    <section id="sobre"><div class="container">
+      <div class="section-head reveal"><div><h2>Um perfil que conecta tecnologia e negócio</h2><p>Experiência prática em desenvolvimento, suporte, operações e liderança, com atuação próxima a clientes, equipes multidisciplinares e projetos simultâneos.</p></div></div>
+      <div class="grid-4 reveal">
+        <div class="card"><div class="metric">6+ anos</div><div class="metric-label">de experiência em tecnologia</div></div>
+        <div class="card"><div class="metric">5 pessoas</div><div class="metric-label">em equipe multidisciplinar sob liderança técnica</div></div>
+        <div class="card"><div class="metric">4–5</div><div class="metric-label">projetos acompanhados simultaneamente</div></div>
+        <div class="card"><div class="metric">360°</div><div class="metric-label">visão entre desenvolvimento, operação, cliente e entrega</div></div>
+      </div>
+      <div class="callout reveal" style="margin-top:18px"><strong>Posicionamento profissional:</strong> liderança técnica com base hands-on. Capacidade de atuar tanto na execução quanto na organização do trabalho, no apoio ao time e na interface com clientes.</div>
+    </div></section>
+
+    <section id="atuacao"><div class="container">
+      <div class="section-head reveal"><div><h2>Quatro pilares de atuação</h2><p>Uma visão clara das frentes onde experiência técnica, liderança e entrega se encontram.</p></div></div>
+      <div class="grid-4 pillars">
+        <article class="card skills-card reveal"><div class="pillar-num">01 • Lead</div><h3>Liderança Técnica</h3><ul><li>Referência técnica para equipes</li><li>Mentoria e apoio em decisões</li><li>Onboarding e treinamento</li><li>Entrevistas e apoio na seleção</li><li>Gestão de incidentes e crises</li><li>Melhoria contínua de processos</li></ul></article>
+        <article class="card skills-card reveal"><div class="pillar-num">02 • Build</div><h3>Desenvolvimento Full Stack</h3><ul><li>Node.js, JavaScript e React</li><li>Python e Java</li><li>APIs REST</li><li>SQL, NoSQL e MongoDB</li><li>HTML/CSS e jornadas digitais</li><li>Arquitetura de software</li></ul></article>
+        <article class="card skills-card reveal"><div class="pillar-num">03 • Deliver</div><h3>Projetos & Clientes</h3><ul><li>Refinamento e estimativas</li><li>Kickoff e Handover</li><li>Acompanhamento de múltiplos projetos</li><li>Scrum e trabalho por sprints</li><li>SLAs e governança operacional</li><li>Relacionamento consultivo com clientes</li></ul></article>
+        <article class="card skills-card reveal"><div class="pillar-num">04 • Automate</div><h3>IA & Automação</h3><ul><li>LLMs e IA Generativa</li><li>Engenharia de Prompts</li><li>Integração com APIs de IA</li><li>Chatbots</li><li>n8n</li><li>Automação de processos</li></ul></article>
+      </div>
+    </div></section>
+
+    <section id="cases"><div class="container">
+      <div class="section-head reveal"><div><h2>Experiências selecionadas</h2><p>Casos baseados na trajetória profissional descrita no currículo, destacando contexto, atuação e impacto sem expor informações sensíveis.</p></div></div>
+      <div class="grid-2">
+        <article class="card case-card reveal"><div class="case-kicker">Tech Leadership • Delivery</div><h3>Referência técnica em equipe multidisciplinar</h3><p>Atuação Full Stack combinada com liderança técnica de uma equipe multidisciplinar envolvendo Desenvolvimento, QA e UX.</p><ul><li>Apoio em dúvidas e decisões técnicas</li><li>Atuação em demandas de maior complexidade</li><li>Refinamentos e estimativas</li><li>Acompanhamento simultâneo de múltiplos projetos</li></ul><div class="case-result"><strong>Destaque:</strong> atuação simultânea como desenvolvedor e referência técnica do time.</div><div class="tags"><span class="tag">Tech Lead</span><span class="tag">Scrum</span><span class="tag">Delivery</span><span class="tag">Team Support</span></div></article>
+        <article class="card case-card reveal"><div class="case-kicker">Incident Management • Client</div><h3>Liderança em incidentes críticos</h3><p>Condução de incidentes e salas de guerra junto a clientes, coordenando análises e ações para restabelecimento dos serviços.</p><ul><li>Triagem e análise de criticidade</li><li>Coordenação entre níveis de suporte</li><li>Comunicação com clientes</li><li>Foco em mitigação de impacto e redução de recorrência</li></ul><div class="case-result"><strong>Destaque:</strong> combinação de visão técnica, organização operacional e relacionamento com cliente.</div><div class="tags"><span class="tag">Incident Management</span><span class="tag">SLA</span><span class="tag">War Room</span><span class="tag">Customer</span></div></article>
+        <article class="card case-card reveal"><div class="case-kicker">Automation • Data Integration</div><h3>Integrações e automações de processos</h3><p>Desenvolvimento de fluxos de processamento e integração de dados utilizando Pentaho PDI, APIs REST, bancos SQL/NoSQL e automações.</p><ul><li>Pentaho Data Integration</li><li>Node.js e APIs REST</li><li>SQL, NoSQL e MongoDB</li><li>Automação com n8n</li></ul><div class="case-result"><strong>Destaque:</strong> experiência conectando sistemas, dados e processos de negócio.</div><div class="tags"><span class="tag">PDI</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">n8n</span></div></article>
+        <article class="card case-card reveal"><div class="case-kicker">Conversational Systems • AI</div><h3>Chatbots, jornadas e IA generativa</h3><p>Criação de jornadas de comunicação por e-mail, WhatsApp e SMS, além de chatbots, automações e soluções com IA generativa e LLMs.</p><ul><li>Chatbots e fluxos conversacionais</li><li>LLMs e IA Generativa</li><li>Integração com APIs</li><li>Automação de jornadas</li></ul><div class="case-result"><strong>Destaque:</strong> uso de IA e automação como parte de soluções reais de comunicação.</div><div class="tags"><span class="tag">LLM</span><span class="tag">Chatbots</span><span class="tag">Automation</span><span class="tag">AI</span></div></article>
+        <article class="card case-card reveal"><div class="case-kicker">Solution Design • Critical Flow</div><h3>Correção de fluxo crítico em chatbot</h3><p>Condução da análise e elaboração da solução para correção de um fluxo crítico, abrangendo diagnóstico, desenho, documentação, estimativa e implementação.</p><ul><li>Diagnóstico técnico</li><li>Desenho de solução</li><li>Documentação</li><li>Estimativa e implementação</li></ul><div class="case-result"><strong>Destaque:</strong> atuação ponta a ponta, da análise à implementação.</div><div class="tags"><span class="tag">Solution Design</span><span class="tag">Chatbot</span><span class="tag">Troubleshooting</span><span class="tag">Delivery</span></div></article>
+        <article class="card case-card reveal"><div class="case-kicker">Migration • COE</div><h3>Projetos e migrações em ambiente de COE</h3><p>Participação em projetos para diferentes clientes, incluindo criação de soluções e migração de projetos de outras plataformas.</p><ul><li>Análise de cenário</li><li>Construção e adaptação de soluções</li><li>Migração entre plataformas</li><li>Atuação consultiva</li></ul><div class="case-result"><strong>Destaque:</strong> experiência em ambientes de múltiplos clientes e diferentes contextos técnicos.</div><div class="tags"><span class="tag">COE</span><span class="tag">Migration</span><span class="tag">Consulting</span><span class="tag">Projects</span></div></article>
+      </div>
+    </div></section>
+
+    <section id="trajetoria"><div class="container">
+      <div class="section-head reveal"><div><h2>Trajetória profissional</h2><p>Uma evolução construída a partir de operações e suporte até desenvolvimento, liderança técnica e atuação consultiva em projetos.</p></div></div>
+      <div class="card reveal"><div class="timeline">
+        <div class="timeline-item"><h3>D1 | Smarkio Operações & Suporte</h3><p>Evolução de Estagiário em Operações até Analista de Suporte Pleno, com atuação em sustentação, integrações, incidentes, debug e monitoramento.</p></div>
+        <div class="timeline-item"><h3>Zenvia Suporte Técnico</h3><p>Sustentação estratégica, gestão de SLAs, incidentes críticos, liderança funcional, onboarding, treinamentos e apoio gerencial.</p></div>
+        <div class="timeline-item"><h3>Zenvia Full Stack & Referência Técnica</h3><p>Desenvolvimento Full Stack, liderança técnica, projetos, clientes, DevOps, IA, automação, integrações e governança de mudanças.</p></div>
+      </div></div>
+    </div></section>
+
+    <section id="stack"><div class="container">
+      <div class="section-head reveal"><div><h2>Stack técnica</h2><p>Tecnologias e competências organizadas por contexto de atuação.</p></div></div>
+      <div class="stack-groups">
+        <div class="card stack-group reveal"><h3>Desenvolvimento</h3><div class="stack"><span>JavaScript</span><span>Node.js</span><span>React</span><span>Python</span><span>Java</span><span>HTML/CSS</span><span>APIs REST</span></div></div>
+        <div class="card stack-group reveal"><h3>Dados & Integrações</h3><div class="stack"><span>SQL</span><span>NoSQL</span><span>MongoDB</span><span>Pentaho PDI</span><span>FastReport</span></div></div>
+        <div class="card stack-group reveal"><h3>DevOps & Delivery</h3><div class="stack"><span>Git</span><span>GitHub</span><span>DevOps</span><span>CI/CD</span><span>Azure DevOps</span><span>GMUD</span></div></div>
+        <div class="card stack-group reveal"><h3>IA & Automação</h3><div class="stack"><span>LLMs</span><span>IA Generativa</span><span>Prompt Engineering</span><span>ChatGPT</span><span>Gemini</span><span>Grok</span><span>n8n</span><span>Chatbots</span></div></div>
+        <div class="card stack-group reveal"><h3>Gestão & Projetos</h3><div class="stack"><span>Scrum</span><span>Jira</span><span>Trello</span><span>Refinamento</span><span>Estimativas</span><span>Kickoff</span><span>Handover</span><span>SLA</span></div></div>
+        <div class="card stack-group reveal"><h3>Observabilidade & Operação</h3><div class="stack"><span>Grafana</span><span>Datadog</span><span>Movidesk</span><span>Incident Management</span><span>Monitoring</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="contato"><div class="container"><div class="contact-box">
+      <div class="contact-main reveal"><div class="eyebrow">Contato profissional</div><h2>Tecnologia, liderança e entrega.</h2><p>Aberto a oportunidades em liderança técnica, desenvolvimento, projetos e posições que conectem tecnologia, pessoas e negócio.</p><div class="hero-actions"><a class="btn primary" href="https://linkedin.com/in/lucasventura01" target="_blank" rel="noreferrer">LinkedIn</a><a class="btn" href="mailto:lucasvms01@gmail.com">E-mail</a><a class="btn" href="tel:+5511987646110">(11) 98764-6110</a><a class="btn" href="#top">Voltar ao topo</a></div></div>
+      <div class="card reveal"><div class="case-kicker">Formação</div><h3>MBA em Engenharia de Software</h3><p>FIAP concluído em 2026, com formação complementar em liderança, gestão ágil, projetos, arquitetura de software, DevOps e Inteligência Artificial.</p></div>
+    </div></div></section>
+  </main>
+
+  <div class="container"><footer><span>© <span id="year"></span> Lucas Ventura</span><span>Portfolio • Technology Leadership • Full Stack • Projects</span></footer></div>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    const closeMenu=()=>{navLinks.classList.remove('open');menuToggle.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menu')};
+    menuToggle.addEventListener('click',()=>{const isOpen=navLinks.classList.toggle('open');menuToggle.classList.toggle('open',isOpen);menuToggle.setAttribute('aria-expanded',String(isOpen));menuToggle.setAttribute('aria-label',isOpen?'Fechar menu':'Abrir menu')});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+    window.addEventListener('resize',()=>{if(window.innerWidth>900)closeMenu()});
+  </script>
+</body>
+</html>
